@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
 
     void GetRotation()
     {
+        rocketRigidbody.freezeRotation = true; // freeze rotation to be able to manually rotate the rocket
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * rotationPower * Time.deltaTime);
@@ -39,5 +40,6 @@ public class Movement : MonoBehaviour
         {
             transform.Rotate(Vector3.back * rotationPower * Time.deltaTime);
         }
+        rocketRigidbody.freezeRotation = false; // unfreeze rotation so unity's physics system can take over
     }
 }
