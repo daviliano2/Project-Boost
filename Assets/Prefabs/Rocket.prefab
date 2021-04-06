@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrustPower: 1000
-  rotationPower: 200
+  rotationPower: 250
 --- !u!54 &238222133
 Rigidbody:
   m_ObjectHideFlags: 0
