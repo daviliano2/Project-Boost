@@ -6,6 +6,8 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] float thrustPower = 1000f;
     [SerializeField] float rotationPower = 200f;
+    [SerializeField] AudioClip thrusterSFX = null;
+
     Rigidbody rocketRigidbody = null;
     AudioSource rocketAudioSource = null;
 
@@ -30,7 +32,7 @@ public class Movement : MonoBehaviour
             rocketRigidbody.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime);
             if (!rocketAudioSource.isPlaying)
             {
-                rocketAudioSource.Play();
+                rocketAudioSource.PlayOneShot(thrusterSFX);
             }
         }
         else
