@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -40,12 +38,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void StopThrusting()
-    {
-        mainThrusterParticles.Stop();
-        rocketAudioSource.Stop();
-    }
-
     void StartThrusting()
     {
         if (!mainThrusterParticles.isPlaying)
@@ -57,6 +49,12 @@ public class Movement : MonoBehaviour
         {
             rocketAudioSource.PlayOneShot(thrusterSFX);
         }
+    }
+
+    void StopThrusting()
+    {
+        mainThrusterParticles.Stop();
+        rocketAudioSource.Stop();
     }
 
     void GetRotation()
