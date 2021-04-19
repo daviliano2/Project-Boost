@@ -12,7 +12,7 @@ public class CollisionHandler : MonoBehaviour
     AudioSource rocketAudioSource = null;
 
     bool isTransitioning = false;
-    bool areCollisionsDisabled = true;
+    bool areCollisionsDisabled = false;
 
     void Start()
     {
